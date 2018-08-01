@@ -155,3 +155,30 @@ $('.green') green만 선택.
 .find() many 아래
 
 .siblings()
+
+
+
+Selector
+
+```
+$("*")                      // all elements
+$("p.demo")                 // <p> elements with class="intro"
+$("p:first")                // the first <p> element
+$("p span")                 // span, descendant of p
+$("p > span")               // span, direct child of p
+$("p + span")               // span immediately proceeded by a p
+$("p ~ span")               // strong element proceeded by p
+$("ul li:first")            // the first <li> element of the first <ul>
+$("ul li:first-child")      // the first <li> element of every <ul>
+$("ul li:nth-child(3)")     // third child
+$("[href]")                 // any element with an href attribute
+$("a[target='_blank']")     // <a> elements with a target "_blank" attribute
+$("a[target!='_blank']")    // <a> elements with a target attribute value other than "_blank"
+$(":input")                 // all form elements
+$(":button")                // <button> and <input> elements of type="button"
+$("tr:even")                // even <tr> elements
+$("tr:odd")                 // odd <tr> elements
+$("span:parent")            // element which has child element
+$("span:contains('demo')")  // element conaining the specified text
+Actions  
+```
