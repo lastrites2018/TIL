@@ -84,29 +84,56 @@ $('#result').prepend(newEl2);
 
 ```
 
-USEFUL METHODS 
+
+
+jQuery 알아둬야 할 메소드
+
+- html/text
+
+$('#hello').html(); hello셀렉터의 내용을 가져옴.
+
+$('#hello').html('teststs');내용을 채워줌
+
+- append/prepend(뒤에 붙음)
+
+  $(추가할요소).appendTo(타겟);
+
+  $(타겟).append(newEL);
+
+  $(타겟).prepend(newEL); 
+
+  주의사항 : appendTo의 경우 문자열에 태그 필요
+
+   //$("<p>태그필요</p>").appendTo('.test');
+
+  $("작동안함").appendTo('.test');
+
+- remove / empty
+
+- val
+
+  input 태그에서 가져오는 것
 
 - Event
 
-  - on
-
-  - off
+  - on / off
 
     jQuery 에서 이벤트 핸들러는 중복 적용이 가능하다.
 
     
 
+
 http://htmlcheatsheet.com/jquery/
 
+```
 events
-
-basiselector
-
+basic
+selector
 DOM Manipulation
-
 정도만 알면 twittler 쉽게 만들 수 있다.
-
 이 내용들은 기억하는게 좋다.
+
+```
 
 jquery.com
 
