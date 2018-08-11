@@ -1,4 +1,4 @@
-DOM & jQuery
+## DOM & jQuery
 
 ELEMENT VS NODE
 
@@ -86,17 +86,17 @@ $('#result').prepend(newEl2);
 
 
 
-jQuery 알아둬야 할 메소드
+## jQuery 알아둬야 할 메소드
 
 - html/text
 
-$('#hello').html(); hello셀렉터의 내용을 가져옴.
+  $('#hello').html(); hello셀렉터의 내용을 가져옴.
 
-$('#hello').html('teststs');내용을 채워줌
+  $('#hello').html('teststs');내용을 채워줌
 
 - append/prepend(뒤에 붙음)
 
-  $(추가할요소).appendTo(타겟);
+  $(추가 할 요소).appendTo(타겟);
 
   $(타겟).append(newEL);
 
@@ -104,7 +104,7 @@ $('#hello').html('teststs');내용을 채워줌
 
   주의사항 : appendTo의 경우 문자열에 태그 필요
 
-   //$("<p>태그필요</p>").appendTo('.test');
+   $("<p>태그필요</p>").appendTo('.test');
 
   $("작동안함").appendTo('.test');
 
@@ -185,7 +185,7 @@ $('.green') green만 선택.
 
 
 
-Selector
+## Selector
 
 ```
 $("*")                      // all elements
@@ -209,3 +209,26 @@ $("span:parent")            // element which has child element
 $("span:contains('demo')")  // element conaining the specified text
 Actions  
 ```
+
+https://zetawiki.com/wiki/JQuery_%EC%85%80%EB%A0%89%ED%84%B0
+
+
+
+## 기타 
+
+[[jQuery\] if문으로 요소(element)가 있는지 확인하기.](http://gyuha.tistory.com/343)
+
+```
+- ID exists CHECK
+
+javascript way
+if ( document.getElementById('myDiv') ) {
+    alert('myDiv exists');
+}
+
+jQuery way
+if ( $('#myDiv').length ) {
+    alert('myDiv exists');
+}
+```
+

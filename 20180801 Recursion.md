@@ -1,4 +1,4 @@
-- Recursion, Recurive way 순환적 방법
+- Recursion, Recursive way 순환적 방법
 
 자신 안에서 정의했던 함수를 다시 호출함.
 
@@ -102,11 +102,7 @@ document.children.있니(selector)
 
   // {} input : output
 
-특정한 입력에 대한 함수의 결과는 변동되지 않으니까 캐싱할 수 있음.
-
-메모이제이션을 사용하면, recursion을 좀 더 효율적으로 만들 수 있다.
-
-리커시브 케이스일 경우에 메모이제이션 해주는 것은 알아둬야 할 기법.
+특정한 입력에 대한 함수의 결과는 변동되지 않으니까 캐싱할 수 있음. 메모이제이션을 사용하면, recursion을 좀 더 효율적으로 만들 수 있다. 리커시브 케이스일 경우에 메모이제이션 해주는 것은 알아둬야 할 기법.
 
 ```
 function memoizefib(num){ //num은 피보나치 인덱스
@@ -124,11 +120,7 @@ function memoizefib(num){ //num은 피보나치 인덱스
 
 
 
-길 찾기 문제,
-
-계단 문제
-
-같은 경우에 recursion으로 풀 수 있음.
+길 찾기 문제, 계단 문제 같은 경우에 recursion으로 풀 수 있음.
 
 
 
