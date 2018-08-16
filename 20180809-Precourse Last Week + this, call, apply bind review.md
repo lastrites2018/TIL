@@ -26,7 +26,7 @@ http://lesterbx.github.io/
 
 https://lesterbx.github.io/trello-clone-vanilla/
 
- https://developers.google.com/web/tools/chrome-devtools/?hl=ko
+https://developers.google.com/web/tools/chrome-devtools/?hl=ko
 
 
 
@@ -44,7 +44,7 @@ https://lesterbx.github.io/trello-clone-vanilla/
 
 
 
-프리코스에서 기본기가 없어서 더 오래걸리는 경우가 많다. 늦어지는 분들은 복습을 안 한 분들, 프리코스 복습할 것. 콜백 이터레이터 애매하게 알고 있는 걸 확실하게 더 복습하는 걸 추천. 당연히 다 비슷비슷하게 느리기 때문에, 프리 코스에서 잘 모르는 부분들을 확실하게 하는 것. 
+프리코스에서 기본기가 없어서 더 오래걸리는 경우가 많다. 늦어지는 분들은 복습을 안 한 분들, 프리코스 복습할 것. 콜백 이터레이터 애매하게 알고 있는 걸 확실하게 더 복습하는 걸 추천. 당연히 다 비슷비슷하게 느리기 때문에, 프리코스에서 잘 모르는 부분들을 확실하게 하는 것. 
 
 
 
@@ -56,7 +56,7 @@ https://lesterbx.github.io/trello-clone-vanilla/
 
 리눅스 명령어 많이 공부할 것, 기본임. 
 
-리눅스 명령어 권한
+리눅스 명령어 권한, 
 
 파일 옮기고 닫고 삭제하고 권한주고 특정 사용자한테 권한 주고 미리미리 해볼 것
 
@@ -74,15 +74,13 @@ callback promise async await event loop
 
 this가 뭐에요? 한 마디로? 빨대? 참조?
 
-익스큐전 컨텍스의 
-
-실행 컨텍스트는 함수가 어떻게 불리는지에 따라 결정된다 
+실행excution 컨텍스트context는 함수가 어떻게 불리는지에 따라 결정된다 
 
 scope가 한 마디로 뭐에요? : 유효 범위
 
 변수가 스코프 체인을 따라서 참조할 수 있는 유효범위
 
-closer 외부 변수를 참조할 수 있는 내부 함수
+closure 외부 변수를 참조할 수 있는 내부 함수
 
 ---
 
@@ -121,7 +119,9 @@ Array.isArray는 있음
 
 ## prototype의 의미?
 
-인스턴스가 생성 될 때 원형(original foam), 즉 프로토타입(prototype)의 모양대로 인스턴스가 생성.
+인스턴스가 생성 될 때 원형(original foam), 
+
+즉 프로토타입(prototype)의 모양대로 인스턴스가 생성.
 
 prototype 붕어빵 틀
 
@@ -131,7 +131,7 @@ instance는 붕어
 
 
 
-Object는 사실 function //디벨로퍼에서 찍어보면
+Object는 사실 함수(function)이다! // 디벨로퍼에서 찍어보면
 
 ```
 Object
@@ -153,8 +153,6 @@ Car.prototype.ride = function () {
 - JavaScript는 원래는 클래스 개념이 없었음. 지금도 prototype 기반 언어.
 - prototype 기반으로 객체 지향 프로그래밍을 흉내냄
 - 문법적인 편의로 class란 keyword를 도입 (ES6)
-
-
 
 - 자바스크립트에서 기본적으로 제공되는 객체에 사용자 정의 메소드를 직접 추가할 수는 있음(그러나, 추천하지 않음)
 
@@ -224,7 +222,7 @@ foo('hello', 1,2,'world');
 
 Array.prototype.slice.call(arguments);
 
-아규먼트를 어레이로 변환시켜주는 자주 쓰는 패턴.
+arguments를 array로 변환시켜주는 자주 쓰는 패턴.
 
 ```javascript
 .call을 컨스트럭터 체인을 쓰기 위해 사용할 수 있다
