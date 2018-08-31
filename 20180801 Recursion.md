@@ -37,7 +37,8 @@ var function_name = function(input) {
 
 그냥 돌아가는 코드를 짜는 것도 중요하지만, 직관적인 코드를 짜는 것이 더 중요하다. 다른 사람이 쉽게 이해할 수 있는 코드를 짜는 것. 그래서 재귀 함수가 중요하다.
 
-```
+```javascript
+// iterator way
 function fibonacci(num) {
     var a = 1, b = 0, temp;
     
@@ -51,13 +52,12 @@ function fibonacci(num) {
 }
 ```
 
-
-
-```
+```javascript
+//recursive way
 function fib(num){ //num은 피보나치 인덱스
     //base case
     if (num <= 1) {
-        return 1 ;
+        return num;
     }
     return fib(num - 1) + fib(num - 2);
 }
@@ -69,9 +69,7 @@ function fib(num){ //num은 피보나치 인덱스
 
 Recursion의 단점
 
-  직관적인 코드를 짤 때는 좋지만, 호출 횟수가 지나치게 많다. 실행횟수가 급격히 증가.
-
-  따라서 메모이제이션 필요.
+  직관적인 코드를 짤 때는 좋지만, 호출 횟수가 지나치게 많다. 실행횟수가 급격히 증가. 따라서 메모이제이션 필요.
 
 
 
@@ -104,16 +102,16 @@ document.children.있니(selector)
 
 특정한 입력에 대한 함수의 결과는 변동되지 않으니까 캐싱할 수 있음. 메모이제이션을 사용하면, recursion을 좀 더 효율적으로 만들 수 있다. 리커시브 케이스일 경우에 메모이제이션 해주는 것은 알아둬야 할 기법.
 
-```
+```javascript
 function memoizefib(num){ //num은 피보나치 인덱스
-    var cache = {}; /input : output
-    //base case
+    var cache = {}; //input : output
+    // base case
     if (num <= 1) {
         return 1 ;
     }
-    fib(num-1)를 캐시에 있는지 확인해서 사용? 없으면 불러오기
-    fib(num-2)    
-    return fib(num - 1) + fib(num - 2);
+   // fib(num-1)를 캐시에 있는지 확인해서 사용? 없으면 불러오기
+    //fib(num-2)    
+    return memoizefib(num - 1) + memoizefib(num - 2);
     
 }
 ```
