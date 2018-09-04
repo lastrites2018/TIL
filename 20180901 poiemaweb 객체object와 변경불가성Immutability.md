@@ -4,7 +4,8 @@
 var foo = {
   val: 10
 }
-// foo를 위와 같이 생성한 것이 바로 객체 리터럴. 이때 변수 foo는 객체 자체를 저장하고 있는 것이 아니라 생성된 객체의 참조값(address)를 저장하고 있다.
+// foo를 위와 같이 생성한 것이 바로 객체 리터럴. 이때 변수 foo는 객체 자체를 저장하고 있는 것이 아니라 
+// 생성된 객체의 참조값(address)를 저장하고 있다.
 
 ```
 
@@ -15,7 +16,8 @@ var foo = { val : 10};
 var bar = { val : 10};
 
 foo === bar; // false 변수 
-foo와 변수 bar는 비록 내용은 같지만 별개의 객체를 생성하여 참조값을 할당하였다. 따라서 변수 foo와 변수 bar의 참조값 즉 어드레스는 동일하지 않다.
+// foo와 변수 bar는 비록 내용은 같지만 별개의 객체를 생성하여 참조값을 할당하였다. 
+// 따라서 변수 foo와 변수 bar의 참조값 즉 어드레스는 동일하지 않다.
 
 var a = {}, b = {}, c = {}; // a, b, c는 각각 다른 빈 객체를 참조
 console.log(a === b, a === c, b === c); // false false false
@@ -46,7 +48,7 @@ var b = a;
 - [BOM (Browser Object Model)](http://www.w3schools.com/js/js_window.asp)
 - [DOM (Document Object Model)](https://poiemaweb.com/js-dom)
 
-**Standard Built-in Objects(표준 빌트인 객체)**를 제외한 BOM과 DOM을 **Native Object**라고 분류하기도 한다. 또한 사용자가 생성한 객체를 **Host Object(사용자 정의 객체)**라 한다.
+**Standard Built-in Objects**(표준 빌트인 객체)를 제외한 BOM과 DOM을 **Native Object**라고 분류하기도 한다. 또한 사용자가 생성한 객체를 **Host Object**(사용자 정의 객체)라 한다.
 
 - Host Object(사용자 정의 객체)
 
