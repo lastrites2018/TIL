@@ -116,6 +116,27 @@ arr1.push(...arr2); // == arr1.push(4, 5, 6);
 console.log(arr1); // [ 1, 2, 3, 4, 5, 6 ]
 ```
 
+```javascript
+Write a function called "joinArrayOfArrays".
+
+Given an array of arrays, "joinArrayOfArrays" returns a single array containing the elements of the nested arrays.
+
+let joinArrayOfArrays = (arr) => {
+  // your code here
+  let newArr = [];
+  arr.forEach(ele => {
+    newArr.push(...ele);
+    })
+    return newArr;
+}
+
+var output = joinArrayOfArrays([[1, 4], [true, false], ['x', 'y']]);
+console.log(output); // --> [1, 4, true, false, 'x', 'y']
+
+```
+
+
+
 
 
 ## Spread 연산자를 이용한 배열 복사
