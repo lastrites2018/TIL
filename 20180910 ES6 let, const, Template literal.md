@@ -166,7 +166,8 @@ console.log(user); // { name: 'Kim' }
 console.log(`1 + 1 = ${1 + 1}`);
 const name = 'test';
 
-console.log(`Hello ${name.toUpperCase()}`); // Hello TEST // 함수 실행 가능`
+console.log(`Hello ${name.toUpperCase()}`); // Hello TEST 
+// 함수 실행 가능
 ```
 
 
