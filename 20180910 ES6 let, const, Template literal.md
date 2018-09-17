@@ -36,7 +36,7 @@ let foo = 1; // 전역 변수
 
 {
   console.log(foo); // RefrenceError : foo is not defined
-     foo = 2; 지역 변수
+     let foo = 2; 지역 변수
 }
 // ES6의 선언문도 여전히 호이스팅이 발생하기에 참조 에러가 발생! 
 
