@@ -41,8 +41,6 @@ function Person () {}
    _proto_는 Prototype Link
 ```
 
-
-
 ```javascript
 function Person() {}
     Person.prototype.eyes = 2;
@@ -55,7 +53,6 @@ Person.prototype 접근하면
 // Object {eyes : 2, nose 1}
 Prototype Object는 일반적인 객체이므로 속성을 마음대로 추가/삭제 할 수 있다. 
 kim과 park은 Person 함수를 통해 생성되었으니 Person.prototype을 참조할 수 있다.
-
 
 ```
 
@@ -106,8 +103,6 @@ console.log(B);
 https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67
 
 좀 어려운 설명 http://insanehong.kr/post/javascript-prototype/
-
-
 
 
 
