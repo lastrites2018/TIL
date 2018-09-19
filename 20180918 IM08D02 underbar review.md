@@ -1,15 +1,46 @@
 ## check point 1-2 solution
 
 ```javascript
+// check point 1
+
 6. call stack -> 순서대로 보기
 
 8. outer() 들어가자마자 x를 var로 새로 선언하고, 
-   실행만 시키고, 리턴이 없기 때문에 글로벌 scope만 보면 됨.
-   리턴을 해준다고 해도, 대입을 새롭게 해주지 않았기 때문에. 
+   inner() 호출만 시키고, 리턴이 없기 때문에 글로벌 scope만 보면 됨.
+   만약 리턴을 해준다고 해도, 대입을 새롭게 해주지 않았기 때문에. 
    그냥 var x = 10;
-    
-9. inner의 x는 신경쓰지 않아도 되는 이유는 var로 새로 선언했기 때문에
-로컬 scope이기 때문.
+   
+var x = 10;
+function outer () {
+  var x = 20;
+  function inner () {
+    x = x + 10;
+    return x;
+  }
+  inner();
+}
+
+outer();
+
+var result = x;
+
+
+9. inner의 x는 신경쓰지 않아도 되는 이유는 
+var로 새로 선언했기 때문에 local scope이기 때문.
+
+var x = 10;
+function outer () {
+  x = 20;
+  function inner () {
+    var x = x + 20;
+    return x;
+  }
+  inner();
+}
+
+outer();
+
+var result = x;
 
 // check point 2
 
