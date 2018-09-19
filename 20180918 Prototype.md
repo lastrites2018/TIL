@@ -1,4 +1,4 @@
-## Prototype 이해해보자
+## Prototype을 이해해보자
 
 객체는 언제나 함수 (Function)로 생성된다.
 
@@ -54,7 +54,7 @@ function Person() {}
 Person.prototype 접근하면
 // Object {eyes : 2, nose 1}
 Prototype Object는 일반적인 객체이므로 속성을 마음대로 추가/삭제 할 수 있다. 
-kim과 park은 Person 함수를 통해 생성되었으니 Person.prototype을 참조할 수 d있다.
+kim과 park은 Person 함수를 통해 생성되었으니 Person.prototype을 참조할 수 있다.
 
 
 ```
