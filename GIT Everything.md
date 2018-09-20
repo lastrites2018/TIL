@@ -63,3 +63,13 @@ http://lawfully.kr/smart/jekyll.html (훌륭)
 기타 등등
 
 http://tech.kakao.com/page/3/ 카카오 깃 블로그
+
+
+
+## 에러 해결
+
+### [[GIT.Error\] ! [rejected] master -> master (fetch first)](http://dwenn.tistory.com/38)
+
+git push origin +master
+
+강제로 진행은 할 수 있지만, 기존 데이터는 보장 못 한다
