@@ -27,14 +27,15 @@ http://hochulshin.com/git-revert-changes/
 ## 포크해온 원본이 업데이트 됐을 경우에?
 
 ```
-포크해오는 순간 내가 마스터, origin이 되어서 local에서는 
-진짜 원본을 확인할 수 없게 된다
+포크해오는 순간 내가 마스터, origin이 되어서 local에서는 진짜 원본을 확인할 수 없게 된다
 
 자신이 포크해 온 데이터가 원본보다 오래되었을 경우에
 git remote -v //현재 remote 확인
 git remote add upstream codestates-url // remote 주소 추가
 git pull upstream master // 업데이트 된 파일 갱신
 (주의 백업 할 것, 기존 작업하던 파일 덮어씌워질 수 있음)
+
+
 
 ```
 
