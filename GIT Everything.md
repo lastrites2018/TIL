@@ -67,10 +67,133 @@ http://tech.kakao.com/page/3/ 카카오 깃 블로그
 
 
 
-## 에러 해결
+## 에러와 해결
 
 ### [[GIT.Error\] ! [rejected] master -> master (fetch first)](http://dwenn.tistory.com/38)
 
 git push origin +master
 
 강제로 진행은 할 수 있지만, 기존 데이터는 보장 못 한다
+
+
+
+- 
+
+```javascript
+** 에러 상황
+git pull upstream master을 하지만 받아오지 못한다.
+
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git pull upstream master
+From https://github.com/codestates/im08-2018-09-data-structure
+ * branch            master     -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	sprint-one/spec/specs-cli.js
+	sprint-two/spec/setSpec.js
+	sprint-two/src/hashTableHelpers.js
+Please commit your changes or stash them before you merge.
+Aborting
+
+해결책 : git stash // 매우 위험. 주의해서 사용할 것.
+
+// error full log
+
+
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git pull upstream master
+From https://github.com/codestates/im08-2018-09-data-structure
+ * branch            master     -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	sprint-one/spec/specs-cli.js
+	sprint-two/spec/setSpec.js
+	sprint-two/src/hashTableHelpers.js
+Please commit your changes or stash them before you merge.
+Aborting
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git remote -v
+origin	https://github.com/lastrites2018/im08-2018-09-data-structure.git (fetch)
+origin	https://github.com/lastrites2018/im08-2018-09-data-structure.git (push)
+upstream	https://github.com/codestates/im08-2018-09-data-structure (fetch)
+upstream	https://github.com/codestates/im08-2018-09-data-structure (push)
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ code .
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git pull upstream master
+From https://github.com/codestates/im08-2018-09-data-structure
+ * branch            master     -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	sprint-one/spec/specs-cli.js
+	sprint-two/spec/setSpec.js
+	sprint-two/src/hashTableHelpers.js
+Please commit your changes or stash them before you merge.
+Aborting
+
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git stash
+Saved working directory and index state WIP on master: 7cdd462 fix eslint error
+
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git pull upstream master
+From https://github.com/codestates/im08-2018-09-data-structure
+ * branch            master     -> FETCH_HEAD
+Auto-merging sprint-two/src/set.js
+CONFLICT (content): Merge conflict in sprint-two/src/set.js
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Automatic merge failed; fix conflicts and then commit the result.
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ oepn .
+-bash: oepn: command not found
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ open .
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ ls
+lib			node_modules		package-lock.json	package.json		sprint-one		sprint-two
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+
+	modified:   lib/underscore/underscore.js
+	modified:   sprint-one/spec/specs-cli.js
+	modified:   sprint-two/spec/setSpec.js
+	modified:   sprint-two/src/hashTableHelpers.js
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   package.json
+	both modified:   sprint-two/src/set.js
+
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git pull upstream master
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git add .
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   lib/underscore/underscore.js
+	modified:   package.json
+	modified:   sprint-one/spec/specs-cli.js
+	modified:   sprint-two/spec/setSpec.js
+	modified:   sprint-two/src/hashTableHelpers.js
+	modified:   sprint-two/src/set.js
+
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git commit -m 'fix merge error'
+husky > npm run -s precommit (node v10.10.0)
+
+ ✔ Running tasks for *.js
+[master 8b82932] fix merge error
+wanprobookui-MacBook-Pro:im08-2018-09-data-structure wanprobook$ git push origin master
+Counting objects: 30, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (30/30), 3.24 KiB | 1.62 MiB/s, done.
+Total 30 (delta 22), reused 0 (delta 0)
+remote: Resolving deltas: 100% (22/22), completed with 13 local objects.
+To https://github.com/lastrites2018/im08-2018-09-data-structure.git
+```
+
