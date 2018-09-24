@@ -73,3 +73,11 @@ function bar (callback) {
 
 
 
+## 공부할 부분 
+
+!! (애매한 값을 확실하게 Boolean 값으로 바꿔줌)
+
+contains -> mdn 찾아보고 사용할 것
+
+
+
