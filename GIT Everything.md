@@ -2,6 +2,24 @@
 
 
 
+![git data transport commands](https://ws3.sinaimg.cn/large/006tNbRwgy1fvl2vagw7fj30l90hn0x6.jpg)
+
+
+
+git pull (fetch + merge)
+
+git --rebase (재조정) -> 커밋 순서대로?
+
+
+
+ㅇ - ㅇ - ㅇ
+
+​        | — ———ㅇ ㅇ- ㅇ- ㅇ- ㅇ-ㅇ 
+
+리베이스는 중간 conflict를 하나 하나 하나 다 확인함
+
+
+
 ## GIT COMMIT 메세지 잘 작성하기
 
 [훌륭한 링크](https://item4.github.io/2016-11-01/How-to-Write-a-Git-Commit-Message/)
