@@ -187,6 +187,3 @@ ex) Array, Object
   - 전자계산기
   - 미로
   - 컴퓨터 메모리 관리 (call, stack)
-
-
-

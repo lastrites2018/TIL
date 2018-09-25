@@ -1,5 +1,11 @@
 ## checkpoint 5~checkpoint 6
 
+![3](https://ws4.sinaimg.cn/large/006tNbRwgy1fvloh4ncf4j30hb0auq3p.jpg)
+
+![4](https://ws1.sinaimg.cn/large/006tNbRwgy1fvloh4bvxdj30hj0atmxw.jpg)
+
+3, 6은 같은 원리다. Array의 특성은 연속성이다. 하나를 지우면, 뒤의 것이 다 옮겨져야 한다. 하나를 삽입한다고 해도 다 이동하겠지.
+
 ```javascript
 2. time complexity 최악의 경우를 가정하고 해야 한다.
 4. linked list index라는 값이 없고 우리가 알 수 있는 것은 tail과 head 밖에 없기 때문에 Linear

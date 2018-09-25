@@ -34,7 +34,7 @@ result의 답은?
 (그리고 생성자도 생성이 되지 prototype : constructor : f())
 
 var arr = [];
-var arr = new Array() // 이 표현이 위로 줄어든 것 뿐이고, array도 함수로 만들어짐. 다 Array.prototype에서 가져와서 쓰는 것. 만들어진 새 배열에 그떄마다 메소드를 넣어주는게 아니라, 부모의 힘(Array.prototype)을 가져와서 쓰기만 한다.
+var arr = new Array() // 이 표현이 위로 줄어든 것 뿐이고, array도 함수로 만들어짐. 다 Array.prototype에서 가져와서 쓰는 것. 만들어진 새 배열에 그때마다 메소드를 넣어주는게 아니라, 부모의 힘(Array.prototype)을 가져와서 쓰기만 한다.
 
 
 ```
