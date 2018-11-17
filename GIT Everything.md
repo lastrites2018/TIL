@@ -42,6 +42,8 @@ http://hochulshin.com/git-revert-changes/
 
 
 
+git stash pop?
+
 ## 포크해온 원본이 업데이트 됐을 경우에?
 
 ```
@@ -215,3 +217,87 @@ remote: Resolving deltas: 100% (22/22), completed with 13 local objects.
 To https://github.com/lastrites2018/im08-2018-09-data-structure.git
 ```
 
+
+
+## deskotop까지 git master 설정했을때?
+
+`rm -rf .git`
+
+
+
+## git 단축키 만들기
+
+https://gist.github.com/EQuimper/d875df92ef0ddaabf00636c90dbc9d25
+
+```shell
+# git po = git push origin master
+git config --global alias.po 'push origin'
+git config --global alias.pom 'push origin master'
+git config --global alias.pum 'pull upstream master'
+
+git config --global alias.up 'pull origin master'
+
+git config --global alias.co checkout
+git config --global alias.cob 'checkout -b'
+git config --global alias.com 'checkout master'
+
+git config --global alias.cm 'commit -m'
+git config --global alias.ci commit
+
+git config --global alias.a add
+git config --global alias.b branch
+git config --global alias.d diff
+git config --global alias.s status 
+
+git status는 추가하실 필요 없어요. git s라고 치시면 사용할 수 있습니다.
+라고 생각했는데 써야 하는 경우도 있음...
+
+git config --global alias.rbm 'git rebase master'
+
+
+git config --global alias.abracadabra 'push origin master'
+git config --global alias.vision 'status -s'
+git config --global alias.qwertyuiop 'branch'
+
+# 만든 전역 alias 보기
+git config --global --get-regexp alias
+
+# 전역 alias 삭제
+$ git config --global --unset alias.d // 방금 위에서 만들었던 alias.d를 삭제할 수 있습니다.
+
+
+
+
+# 지역 Alias 삭제
+$ git config --unset alias.ci
+
+//전역 및 지역 Alias 목록 보기
+$ git config --get-regexp alias	
+
+```
+
+
+
+# [Git]Alias 추가 / 삭제 / 목록 보기
+
+http://minsone.github.io/git/recommend-git-alias
+
+
+
+## git ignore 재설정
+
+```
+1) 전체 cache를 다 지우고 다시 cache 하는 방법은 무식하지만, 간단하다. 만약, 파일이 많지 않다면 try.
+
+– git rm -r –cached . => 현재 repository의 cache를 삭제
+
+– git add . => 다시 tracking하도록 설정
+
+– git commit -m “Updated .gitignore”
+```
+
+
+
+ <https://github.com/github/gitignore> gitignore example
+
+https://josephkim75.wordpress.com/2012/06/13/git%EC%97%90%EC%84%9C-gitignore-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/
