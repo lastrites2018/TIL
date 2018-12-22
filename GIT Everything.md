@@ -225,7 +225,7 @@ To https://github.com/lastrites2018/im08-2018-09-data-structure.git
 
 
 
-## git 단축키 만들기
+# git 단축키 만들기
 
 https://gist.github.com/EQuimper/d875df92ef0ddaabf00636c90dbc9d25
 
@@ -278,7 +278,7 @@ $ git config --get-regexp alias
 
 
 
-# [Git]Alias 추가 / 삭제 / 목록 보기
+## [Git]Alias 추가 / 삭제 / 목록 보기
 
 http://minsone.github.io/git/recommend-git-alias
 
@@ -301,3 +301,17 @@ http://minsone.github.io/git/recommend-git-alias
  <https://github.com/github/gitignore> gitignore example
 
 https://josephkim75.wordpress.com/2012/06/13/git%EC%97%90%EC%84%9C-gitignore-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/
+
+
+
+## git에서 특정 브랜치만 clone하는 방법
+
+git을 사용하다 브랜치 전체를 clone하지 않고 특정 브랜치 하나만 clone하는 것이 가능하다. 
+특히 브랜치가 많은 경우 이 방법을 사용할 수 있다.
+
+```
+git clone -b {branch_name} --single-branch {저장소 URL}
+ex) git clone -b javajigi --single-branch https://github.com/javajigi/java-racingcar
+```
+
+위와 같이 실행하면 java-racingcar의 javajigi branch만 clone할 수 있다.
