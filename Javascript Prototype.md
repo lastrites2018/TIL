@@ -6,7 +6,7 @@
 
 
 
-유연함 : **다른 언어와 다르게, 자바스크립트는 생성자를 통해 생성된 객체라도(new Person) 나중에 생성자의 프로토타입에 새로운 속성을 추가할 수 있고, 이렇게 추가된 속성 또한 모든 객체가 공유한다.**
+유연함 : **다른 언어와 다르게, 자바스크립트는 생성자를 통해 생성된 객체라도(new Person) 나중에 생성자의 프로토타입에 새로운 속성을 추가할 수 있고, 이렇게 추가된 속성 또한 (프로토타입 링크`_proto_` 로 인해) 모든 객체가 공유한다.**
 
 -> c++나 자바의 경우는 헤더나 클래스 몸체가 고정되어 있다! 
 
@@ -51,14 +51,12 @@ Prototype의 뜻에 대한 여러 버전의 설명 :
 
 
 
-자바에서는 객체를 class로 정의하지만, 자바스크립트에서는 function으로 정의한다.
-
-객체는 언제나 함수 (Function)로 생성된다.
+자바에서는 객체를 class로 정의하지만, 자바스크립트에서는 function으로 정의한다. 객체는 언제나 함수 (Function)로 생성된다.
 
 
 
 ```javascript
-function Person () {}  // -> 함수(f부터 }까지의 문자열이 )
+function Person () {}  // -> 함수( f부터 }까지의 문자열이 함수. )
 var personObject = new Person(); // 함수로 객체 생성
 ```
 
@@ -79,7 +77,7 @@ var obj = new Object();
 
 
 
-> 3가지 함수 정의 방식은 결국 Function() 생성자 함수를 통해 함수 객체를 생성한다, 따라서 어떠한 방식으로 함수 객체를 생성하여도 모든 함수 객체의 prototype 객체는 Function.prototype이다. 생성자 함수도 함수 객체이므로 생성자 함수의 prototype 객체는 Function.prototype이다.
+> 어떠한 방식으로 함수 객체를 생성하여도, 결국 Function() 생성자 함수를 통해 함수 객체를 생성하기 때문에 모든 함수 객체의 prototype 객체는 Function.prototype이다. 생성자 함수도 함수 객체이므로 생성자 함수의 prototype 객체는 Function.prototype이다.
 
 
 
@@ -91,11 +89,11 @@ var obj = new Object();
 
 
 
-**함수가 정의될 때는 2가지 일이 동시에 이루어짐**
+## **함수가 정의될 때는 2가지 일이 동시에 이루어진다**
 
 1. 해당 함수에 Constructor (생성자) 자격 부여
 
-Constructor 자격이 부여되면 new를 통해 객체를 만들어 낼 수 있게 됨. 이것이 함수만이 new 키워드를 사용할 수 있는 이유다. constructor가 아니면 new를 사용할 수 없다. -> 함수가 아니면 new를 사용할 수 없다. 
+Constructor 자격이 부여되면 new를 통해 객체를 만들어 낼 수 있게 됨. 이것이 함수만이 new 키워드를 사용할 수 있는 이유다. constructor가 아니면 new를 사용할 수 없다. 즉, 함수가 아니면 new를 사용할 수 없다. 
 
 2. 해당 함수의 Prototype Object 생성 및 연결
 
@@ -108,7 +106,7 @@ function Person () {}
    _proto_ : Object
 
    여기서 constructor는 Prototype Object와 같이 생성되었던 함수를 지칭.
-   _proto_는 Prototype Link
+   _proto_는 Prototype Link!
 ```
 
 ```javascript
@@ -141,7 +139,7 @@ kim과 park은 Person 함수를 통해 생성되었으니 Person.prototype을 �
 
 ## [[prototype]] ? ```_proto_```? 
 
-ECMAScript spec에서는 **자바스크립트의 모든 객체는 자신의 프로토타입을 가리키는 [[Prototype]]이라는 숨겨진 프로퍼티를 가진다** 라고 되어있다. 크롬, 파이어폭스 등에서는 숨겨진 [[Prototype]] 프로퍼티가 __proto__ 프로퍼티로 구현되어 있다. 즉, __proto__과 [[Prototype]]은 같은 개념이다.
+ECMAScript spec에서는 **자바스크립트의 모든 객체는 자신의 프로토타입을 가리키는 [[Prototype]]이라는 숨겨진 프로퍼티를 가진다** 라고 되어있다. 크롬, 파이어폭스 등에서는 숨겨진 [[Prototype]] 프로퍼티가 `__proto__ `프로퍼티로 구현되어 있다. 즉, `__proto__`과 [[Prototype]]은 같은 개념이다.
 
 > 주의해야 할 것은 prototype 프로퍼티는 프로토타입 객체를 가리키는 [[Prototype]] 프로퍼티(__proto__ 프로퍼티)와는 다르다는 것이다. prototype 프로퍼티와 [[Prototype]] 프로퍼티는 모두 프로토타입 객체를 가리키지만 관점의 차이가 있다.
 
@@ -206,7 +204,7 @@ console.log(Object.prototype.hasOwnProperty('hasOwnProperty')); // true
 
 
 
-## 공유와 상속
+## 공유와 상속의 차이 
 
 ```javascript
 // 공유
