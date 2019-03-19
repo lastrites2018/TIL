@@ -227,13 +227,15 @@ To https://github.com/lastrites2018/im08-2018-09-data-structure.git
 
 # git 단축키 만들기
 
-https://gist.github.com/EQuimper/d875df92ef0ddaabf00636c90dbc9d25
+ref : https://gist.github.com/EQuimper/d875df92ef0ddaabf00636c90dbc9d25
 
 ```shell
 # git po = git push origin master
 git config --global alias.po 'push origin'
 git config --global alias.pom 'push origin master'
 git config --global alias.pum 'pull upstream master'
+git config --global alias.pud 'pull upstream dev'
+git config --global alias.pudd 'pull upstream develop'
 
 git config --global alias.up 'pull origin master'
 
@@ -248,13 +250,9 @@ git config --global alias.a add
 git config --global alias.b branch
 git config --global alias.d diff
 git config --global alias.s status 
-
-git status는 추가하실 필요 없어요. git s라고 치시면 사용할 수 있습니다.
-라고 생각했는데 써야 하는 경우도 있음...
-
 git config --global alias.rbm 'git rebase master'
 
-
+#for fun
 git config --global alias.abracadabra 'push origin master'
 git config --global alias.vision 'status -s'
 git config --global alias.qwertyuiop 'branch'
@@ -289,7 +287,7 @@ http://minsone.github.io/git/recommend-git-alias
 ```
 1) 전체 cache를 다 지우고 다시 cache 하는 방법은 무식하지만, 간단하다. 만약, 파일이 많지 않다면 try.
 
-– git rm -r –cached . => 현재 repository의 cache를 삭제
+– git rm -r --cached . => 현재 repository의 cache를 삭제
 
 – git add . => 다시 tracking하도록 설정
 
@@ -310,8 +308,9 @@ git을 사용하다 브랜치 전체를 clone하지 않고 특정 브랜치 하�
 특히 브랜치가 많은 경우 이 방법을 사용할 수 있다.
 
 ```
-git clone -b {branch_name} --single-branch {저장소 URL}
+ㄴgit clone -b {branch_name} --single-branch {저장소 URL}
 ex) git clone -b javajigi --single-branch https://github.com/javajigi/java-racingcar
 ```
 
 위와 같이 실행하면 java-racingcar의 javajigi branch만 clone할 수 있다.
+
